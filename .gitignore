@@ -1,0 +1,54 @@
+*.rpyc 
+*.rpyb 
+*.rpymc 
+*.pyc 
+*.pyo
+*.zip
+
+*~ 
+*.bak 
+*.new 
+*.old 
+*.odt#
+
+/errors.txt
+/files.txt
+/image_cache.txt
+/log.txt
+/save_dump.txt
+/traceback.txt
+
+game/saves 
+game/tmp 
+game/cache 
+env 
+_wfCache
+
+log.txt 
+errors.txt 
+traceback.txt
+
+# macOS-related files
+.DS_Store 
+.AppleDouble 
+.LSOverride
+
+# Windows-related files 
+Thumbs.db 
+Thumbs.db:encryptable 
+ehthumbs.db 
+ehthumbs_vista.db 
+[Dd]esktop.ini
+
+# audacity
+*.aup3
+*.aup3*
+*.aup4
+*.aup4*
+
+# android signing
+*.keystore
+
+*dists/
+
+**/.nomedia
