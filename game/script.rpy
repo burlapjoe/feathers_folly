@@ -1,11 +1,11 @@
 ﻿label start:
+    # call start_anim
 
-    call start_anim
+    call fall_demo
     
     pause
 
     return
-
 
 
 
@@ -81,3 +81,44 @@ label start_anim:
 
 
     $ hpause(t_pan_up + t_dim)
+
+    return
+
+    
+image ocean = Movie(play="images/ocean.mp4")
+
+label fall_demo:
+    $ T_FALL = 2
+    $ T_SWOOP = 0.5
+    $ FINAL_ZOOM = 0.22
+
+    scene ocean:
+        xalign 0.5
+        yalign 0.5
+        rotate -90
+
+    show rairoo_falling:
+        xcenter 0.5
+        yalign 0.0
+
+        parallel:
+            ease T_FALL zoom FINAL_ZOOM
+            # ^^ also try easeout here if you like
+
+        parallel:
+            easein T_FALL yalign 0.5
+
+        linear T_SWOOP xcenter 1.3
+
+    show silas_swoop behind rairoo_falling:
+        xcenter -0.3
+        ycenter 0.5
+
+        pause (T_FALL - T_SWOOP)
+
+        linear T_SWOOP xcenter 0.5
+        linear T_SWOOP xcenter 1.3
+
+    pause (T_FALL + T_SWOOP)
+
+    return
