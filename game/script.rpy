@@ -110,7 +110,7 @@ label fall_demo:
 
         linear T_SWOOP xcenter 1.3
 
-    show silas_swoop behind rairoo_falling:
+    show silas_swoop:
         xcenter -0.3
         ycenter 0.5
 
