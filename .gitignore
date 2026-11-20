@@ -11,6 +11,8 @@
 *.old 
 *.odt#
 
+.vscode/
+
 /errors.txt
 /files.txt
 /image_cache.txt
